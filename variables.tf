@@ -1,7 +1,7 @@
 variable "boundary_addr" {
   type = string
   description = "Boundary URL - This information is stored within a Variable Set"
-  default     = ""
+
 }
 
 variable "boundary_admin_username" {
