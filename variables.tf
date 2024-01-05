@@ -1,13 +1,24 @@
 variable "boundary_addr" {
   type = string
-  description = "Boundary URL - This information is stored within a Variable Set"
-
+  description = "Boundary URL"
 }
 
 variable "boundary_admin_username" {
   type        = string
   description = "Boundary Admin UI Login Name"
   default     = "admin"
+}
+
+variable "org_id" {
+  type = string
+  description = "Boundary Org ID"
+  default = "global"
+}
+
+variable "project_id" {
+  type = string
+  description = "Boundary Project ID"
+  default = "o_xxxxxxxxxx"
 }
 
 variable "boundary_admin_password" {
