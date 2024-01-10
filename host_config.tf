@@ -43,7 +43,8 @@ data "boundary_scope" "project" {
 
 
 resource "boundary_host_catalog_static" "smw_static_host_catalog" {
-  scope_id    = data.boundary_scope.project.id
+  //scope_id    = data.boundary_scope.project.id
+  scope_id = var.project_id
   description = "Self Managed Worker Host Catalogue"
 }
 
@@ -67,7 +68,7 @@ resource "boundary_target" "self_managed_worker" {
   name                     = "boundary-self-managed-worker"
   description              = "Boundary Self Managed Worker EC2"
   egress_worker_filter     = " \"sm-ingress-upstream-worker1\" in \"/tags/type\" "
-  scope_id                 = data.boundary_scope.project.id
+  scope_id                 = var.project_id
   session_connection_limit = -1
   default_port             = 22
   host_source_ids = [
