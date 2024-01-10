@@ -31,6 +31,8 @@
 #   ]
 # }
 
+
+
 resource "boundary_host_catalog_static" "smw_static_host_catalog" {
   scope_id    = var.project_id
   description = "Self Managed Worker Host Catalogue"

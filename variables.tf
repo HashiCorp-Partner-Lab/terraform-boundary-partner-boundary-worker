@@ -24,6 +24,7 @@ variable "project_id" {
 variable "boundary_admin_password" {
   type        = string
   description = "Boundary Admin UI Password"
+  sensitive = true
 }
 
 variable "aws_access" {
