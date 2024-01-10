@@ -1,9 +1,9 @@
-# output "scope_id_output" {
-#   value = var.project_id
-# }
+output "scope_id_output" {
+  value = var.project_id
+}
 
 output "project_id_output_new" {
-  value = data.boundary_scope.project
+  value = data.boundary_scope.project.id
 }
 
 output "org_id_output" {
