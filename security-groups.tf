@@ -7,7 +7,7 @@ resource "aws_security_group" "static_target_sg" {
     from_port   = 0
     to_port     = 0
     protocol    = -1
-    cidr_blocks = [aws_instance.boundary_ingress_worker.public_ip, aws_instance.boundary_ingress_worker.private_ip]
+    cidr_blocks = ["${aws_instance.boundary_ingress_worker.public_ip}/32", "${aws_instance.boundary_ingress_worker.private_ip/32}"]
   }
   egress {
     from_port   = 0
