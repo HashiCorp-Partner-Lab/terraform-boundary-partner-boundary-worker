@@ -31,15 +31,15 @@ resource "boundary_target" "aws_linux_public" {
   ]
 }
 
-data "boundary_scope" "org" {
-  name     = "test-org"
-  scope_id = "global"
-}
+# data "boundary_scope" "org" {
+#   name     = "test-org"
+#   scope_id = "global"
+# }
 
-data "boundary_scope" "project" {
-  name     = "test-project"
-  scope_id = data.boundary_scope.org.id
-}
+# data "boundary_scope" "project" {
+#   name     = "test-project"
+#   scope_id = data.boundary_scope.org.id
+# }
 
 
 resource "boundary_host_catalog_static" "smw_static_host_catalog" {
