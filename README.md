@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -43,8 +44,6 @@ No modules.
 | [boundary_target.aws_linux_public](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/target) | resource |
 | [boundary_target.self_managed_worker](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/target) | resource |
 | [boundary_worker.self_managed_pki_worker](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/worker) | resource |
-| [boundary_scope.org](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/data-sources/scope) | data source |
-| [boundary_scope.project](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/data-sources/scope) | data source |
 | [cloudinit_config.boundary_ingress_worker](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
 ## Inputs
@@ -52,9 +51,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_availability_zone"></a> [availability\_zone](#input\_availability\_zone) | Region within AWS to deploy the resources | `string` | `"eu-west-2b"` | no |
-| <a name="input_aws_access"></a> [aws\_access](#input\_aws\_access) | n/a | `string` | n/a | yes |
+| <a name="input_aws_access"></a> [aws\_access](#input\_aws\_access) | AWS Access Key | `string` | n/a | yes |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | n/a | `string` | `"eu-west-2"` | no |
-| <a name="input_aws_secret"></a> [aws\_secret](#input\_aws\_secret) | n/a | `string` | n/a | yes |
+| <a name="input_aws_secret"></a> [aws\_secret](#input\_aws\_secret) | AWS Secret Key | `string` | n/a | yes |
 | <a name="input_aws_subnet_cidr"></a> [aws\_subnet\_cidr](#input\_aws\_subnet\_cidr) | The AWS Region CIDR range | `string` | `"172.31.32.0/24"` | no |
 | <a name="input_aws_vpc_cidr"></a> [aws\_vpc\_cidr](#input\_aws\_vpc\_cidr) | The AWS Region CIDR range to assign to the VPC | `string` | `"172.31.0.0/16"` | no |
 | <a name="input_boundary_addr"></a> [boundary\_addr](#input\_boundary\_addr) | Boundary URL | `string` | n/a | yes |
@@ -66,9 +65,5 @@ No modules.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_example_target_public_ip"></a> [example\_target\_public\_ip](#output\_example\_target\_public\_ip) | n/a |
-| <a name="output_org_id_output"></a> [org\_id\_output](#output\_org\_id\_output) | n/a |
-| <a name="output_project_id_output_new"></a> [project\_id\_output\_new](#output\_project\_id\_output\_new) | n/a |
-| <a name="output_scope_id_output"></a> [scope\_id\_output](#output\_scope\_id\_output) | n/a |
+No outputs.
+<!-- END_TF_DOCS -->
