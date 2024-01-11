@@ -20,7 +20,7 @@ resource "boundary_host_static" "example_static_host" {
 
 resource "boundary_target" "aws_linux_public" {
   type                     = "tcp"
-  name                     = "aws-public-linux"
+  name                     = "aws-example-linux-target"
   description              = "AWS Linux Public Target"
   egress_worker_filter     = " \"sm-ingress-upstream-worker1\" in \"/tags/type\" "
   scope_id                 = var.project_id
@@ -67,7 +67,7 @@ resource "boundary_target" "self_managed_worker" {
   type                     = "tcp"
   name                     = "boundary-self-managed-worker"
   description              = "Boundary Self Managed Worker EC2"
-  egress_worker_filter     = " \"sm-ingress-upstream-worker1\" in \"/tags/type\" "
+  egress_worker_filter     = " \"true\" in \"/tags/boundary.cloud.hashicorp.com:managed\" "
   scope_id                 = var.project_id
   session_connection_limit = -1
   default_port             = 22
