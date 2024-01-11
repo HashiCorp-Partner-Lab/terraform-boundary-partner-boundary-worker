@@ -9,3 +9,7 @@ output "project_id_output_new" {
 output "org_id_output" {
   value = data.boundary_scope.org
 }
+
+output "example_target_public_ip" {
+  value = aws_instance.boundary_ingress_worker.public_ip
+}
