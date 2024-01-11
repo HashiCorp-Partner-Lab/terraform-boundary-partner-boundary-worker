@@ -28,10 +28,12 @@ variable "boundary_admin_password" {
 }
 
 variable "aws_access" {
+  description = "AWS Access Key"
   type = string
 }
 
 variable "aws_secret" {
+  description = "AWS Secret Key"
   type = string
   sensitive = true
 }
