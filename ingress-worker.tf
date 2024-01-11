@@ -124,7 +124,6 @@ resource "aws_instance" "boundary_ingress_worker" {
   user_data_replace_on_change = true
   user_data_base64            = data.cloudinit_config.boundary_ingress_worker.rendered
   key_name                    = var.ssh_key_name
-  //private_ip                  = "172.31.32.93"
   subnet_id                   = aws_subnet.boundary_ingress_worker_subnet.id
   vpc_security_group_ids      = [aws_security_group.boundary_ingress_worker_ssh.id]
   tags = {

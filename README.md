@@ -13,7 +13,7 @@
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.31.0 |
-| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.11 |
+| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.12 |
 | <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.3 |
 
 ## Modules
@@ -25,17 +25,26 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_instance.boundary_ingress_worker](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
+| [aws_instance.boundary_public_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_internet_gateway.boundary_ingress_worker_ig](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
+| [aws_network_interface.boundary_public_target_ni](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_interface) | resource |
 | [aws_route_table.boundary_ingress_worker_public_rt](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
 | [aws_route_table_association.boundary_ingress_worker_public_rt_associate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
 | [aws_security_group.boundary_ingress_worker_ssh](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
+| [aws_security_group.static_target_sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
 | [aws_subnet.boundary_ingress_worker_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_vpc.boundary_ingress_worker_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
+| [boundary_host_catalog_static.example_host_catalog](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_catalog_static) | resource |
 | [boundary_host_catalog_static.smw_static_host_catalog](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_catalog_static) | resource |
+| [boundary_host_set_static.example_static_host_set](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_set_static) | resource |
 | [boundary_host_set_static.smw_static_host_set](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_set_static) | resource |
+| [boundary_host_static.example_static_host](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_static) | resource |
 | [boundary_host_static.self_managed_worker_host](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_static) | resource |
+| [boundary_target.aws_linux_public](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/target) | resource |
 | [boundary_target.self_managed_worker](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/target) | resource |
 | [boundary_worker.self_managed_pki_worker](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/worker) | resource |
+| [boundary_scope.org](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/data-sources/scope) | data source |
+| [boundary_scope.project](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/data-sources/scope) | data source |
 | [cloudinit_config.boundary_ingress_worker](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
 ## Inputs
@@ -57,4 +66,9 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_example_target_public_ip"></a> [example\_target\_public\_ip](#output\_example\_target\_public\_ip) | n/a |
+| <a name="output_org_id_output"></a> [org\_id\_output](#output\_org\_id\_output) | n/a |
+| <a name="output_project_id_output_new"></a> [project\_id\_output\_new](#output\_project\_id\_output\_new) | n/a |
+| <a name="output_scope_id_output"></a> [scope\_id\_output](#output\_scope\_id\_output) | n/a |

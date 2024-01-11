@@ -2,9 +2,7 @@ resource "aws_instance" "boundary_public_target" {
   ami               = "ami-09ee0944866c73f62"
   instance_type     = "t2.micro"
   availability_zone = "eu-west-2b"
-  //user_data_base64  = data.cloudinit_config.ssh_trusted_ca.rendered
-  //key_name          = aws_key_pair.ec2_key.key_name
-  key_name = "boundary"
+  key_name = aws_instance.boundary_ingress_worker.key_name
 
 
   network_interface {
@@ -12,7 +10,7 @@ resource "aws_instance" "boundary_public_target" {
     device_index         = 0
   }
   tags = {
-    Name         = "boundary-1-dev",
+    Name         = "boundary-example-target",
     service-type = "web",
     application  = "dev",
   }
